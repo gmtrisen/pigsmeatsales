@@ -25,6 +25,20 @@
       font-size: 30px;
       font-style: italic;
  }
+  @media (max-width: 1366px) {
+  #banner {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
 #sideNav{
 
     display: flex;
@@ -35,9 +49,9 @@
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 70px;
+    height: 40px;
     z-index: 100;
-    background-color:hsl(336, 35%, 57%)  ;
+    background-color:skyblue  ;
     border: 1px solid rgba(0, 0, 0,0.03);
     font-size:30px;
 }
@@ -59,6 +73,46 @@
     opacity: 1;
     transition: all ease 0.3s;
 }
+
+/* Responsive: small screens */
+@media (max-width: 768px) {
+  #sideNav {
+    flex-direction: row;
+    height:20px;
+    padding: 10px 0;
+    font-size: 24px;
+    
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li {
+    margin: 5px 0;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+/* @media (max-width: 768px) {
+  #menuToggle {
+    display: block;
+  }
+} */
+
+
+#Pork{
+    align-items: center;
+      background: linear-gradient(rgba(0,0,0,0.5),hsl(336, 100%, 29%))
+}
+
 #Pork{
     align-items: center;
       background: linear-gradient(rgba(0,0,0,0.5),hsl(336, 100%, 29%))
@@ -142,26 +196,40 @@
     text-align: initial;
   }
   
-   @media screen and (max-width:770px){
-     .title-text{
-      font-size: 50px;
-     }
-       .features-box{
-      font-weight: 100;
-      font-size: medium;
-    }
-     .features{
-        flex-basis: 100%;
-     }
-     .features-img{
-      flex-basis: 100%;
-          }
-
-          .features-img img{
-            width: 100%;
-          }
-   }
-
+  @media (max-width: 768px) {
+  .title-text h1 {
+    font-size: 32px;
+  }
+  .title-text p {
+    font-size: 16px;
+  }
+  .features-box {
+    flex-direction: column;
+    width: 90%;
+  }
+  .features,
+  .features-img {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .features-img img {
+    width: 100%;
+  }
+  .features h1 {
+    text-align: center;
+  }
+  .features-desc {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features-icon {
+    margin-bottom: 10px;
+  }
+  .feature-text p {
+    padding: 0 10px;
+  }
+}
+ 
 
 
 
@@ -227,17 +295,65 @@ tr:nth-child(odd){
 }
 
 
- @media screen and (max-width:770px){
-.title-text{
-      font-size: 50px;
-     }
-     .table{
-      width: 100%;
-     }
+ @media (max-width: 768px) {
+  .title-text h1 {
+    font-size: 32px;
+  }
+  .title-text p {
+    font-size: 16px;
+  }
+  table {
+    width: 100%;
+    height: auto;
+    border-spacing: 10px;
+  }
+  th,
+  td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  tr:nth-child(even),
+  tr:nth-child(odd) {
+    background-color: unset; /* Remove row colors for better mobile reading */
+  }
+  tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+  }
+  th,
+  td {
+    display: block;
+    text-align: right;
+    border: none;
+    padding-left: 50%;
+    position: relative;
+  }
+  th::before,
+  td::before {
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+  /* You will need to add content here for each table cell to label them on mobile */
+  th:nth-of-type(1)::before {
+    content: '';
+  }
+  th:nth-of-type(2)::before {
+    content: '';
+  }
+  td:nth-of-type(1)::before {
+    content: '';
+  }
+  td:nth-of-type(2)::before {
+    content: '';
+  }
+}  
 
 
-
- }
  #Contact{
    padding: 100px 0 20px;
    background: #efefef;
@@ -278,13 +394,38 @@ tr:nth-child(odd){
   top: 35%;
   transform:translate(-50%,-50%)
 }
-@media screen and (max-width:770px){
-  .footer-left,.footer-right{
+
+
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .footer-left,
+  .footer-right {
     flex-basis: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-left .fa,
+  .footer-right .fa {
+    margin: 10px;
+  }
+
+  .footer-row h1 {
+    font-size: 24px;
+  }
+
+  .footer-row p {
+    line-height: 28px;
     font-size: 14px;
   }
-  .footer-img{
-    top:25%; 
+
+  .footer-img {
+    max-width: 250px;
+    top: 50%;
   }
 }
 .address{
