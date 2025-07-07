@@ -35,10 +35,11 @@
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 40px;
+    height: 70px;
     z-index: 100;
     background-color:hsl(336, 35%, 57%)  ;
     border: 1px solid rgba(0, 0, 0,0.03);
+    font-size:30px;
 }
 .menu{
     display: flex;
@@ -120,7 +121,7 @@
     text-align: left;
     margin-bottom:10px ;
     font-weight:100 ;
-    color: #009688;
+    color: white;
   }
   .features-desc{
     display: flex;
@@ -133,7 +134,7 @@
     font-size: 30px;
     line-height: 50px;
     border-radius: 8px;
-    color:#009688;
+    color:white;
     border: 1px solid #009688;
   }
   .feature-text p{
@@ -145,6 +146,10 @@
      .title-text{
       font-size: 50px;
      }
+       .features-box{
+      font-weight: 100;
+      font-size: medium;
+    }
      .features{
         flex-basis: 100%;
      }
@@ -174,7 +179,7 @@
 .title-text p{
     margin: auto;
     font-size: 20px;
-    color:chocolate;
+    color:black;
     font-weight: bold;
     position: relative;
     z-index: 1;
